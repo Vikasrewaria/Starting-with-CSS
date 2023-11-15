@@ -1,0 +1,140 @@
+Qustion:1. Create a simple page with some div tags and show different ways to CSS as well as what happens when you target the same element with inline, Internal, and external Css. 
+Also, utilize commets in the project where required.
+Answer:-
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.8">
+  <title>Assignment</title>
+
+<style>
+  .internl{
+    color: green;
+  }
+  .inline_internal {
+    color: red;
+  }
+  .internal_ext  {
+      color: brown;
+  }
+  .inline_internal_external {
+      color: aqua;
+  }
+</style>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="color: red;">Inline</div>
+<div class="internal">Internal</div>
+<div class="external">External</div>
+<div style="color: blueviolet;"class="inline">Inline + Internal</div>
+<div class="int_external internal_ext">Internal + External</div>
+<div style="color: Blueviolet;" class="inline_internal_external">Inline+ Internal+ External</div>
+</div>
+
+</html>
+
+style.css.external{
+  color:blue;
+}
+.int_external{
+  color: green;
+}
+.inline_internal_external{
+  color:bisque;
+}
+
+
+Question:2 Build an HTML page with multiple paragraphs, each assigned a unique class name. 
+Write CSS rules using class selectors to apply distinct styling to each paragraph. Follow the BEM naming
+convention and exlain how you've named the classes.
+Answer:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment</title>
+<style>
+.main__heading {
+color: red;
+}
+.main__subheading {
+color: blue;
+}
+.hero__title {
+color: green;
+}
+.hero__description {
+color: brown;
+}
+.btn {
+background-color: #54fa54;
+}
+.hero__btn-primary {
+background-color: purple;
+color: wheat;
+}
+.hero__btn-secondary {
+background-color: pink;
+}
+</style>
+</head>
+<body>
+<div class="main">
+<p class="main__heading">This is my main heading</p>
+<p class="main__subheading">This is my sub heading</p>
+</div>
+<div class="hero">
+<p class="hero__title">This is my hero title</p>
+<p class="hero__description">This is my hero description</p>
+<button class="btn hero__btn-primary">This is my primary hero button</button>
+<button class="btn hero__btn-secondary">This is my secondary hero button</button>
+</div>
+</body>
+</html>
+
+Question:3. Develop an HTML with various input element. Use CSS to style the form, inclding setting backkground colors for input fields. Create a custom color palette for the form elements and demonstrate how to apply apacity to one of the form sections.
+Answer:
+<label for="email">Email:
+<input type="email" name="email" class="email" placeholder="john@doe.com" id="email"
+required />
+</label>
+<br>
+<label for="password">Password:
+<input type="password" name="password" class="password" placeholder="********"
+id="password" required min=8 />
+</label>
+<br>
+<label for="confirmPassword">Confirm Password:
+<input type="password" name="confirmPassword" class="confirmPassword"
+placeholder="********" id="confirmPassword"
+required />
+</label>
+<br>
+<label for="age">Age:
+<input type="number" name="age" class="age" placeholder="38" id="age" required min=0
+max=150 />
+</label>
+<br>
+<label for="">Gender:
+<input type="radio" id="male" value="male" name="gender" checked />
+<label for="male">Male</label>
+<input type="radio" id="female" value="female" name="gender" />
+<label for="female">Female</label>
+<input type="radio" id="other" value="other" name="gender" />
+<label for="other">Other</label>
+</label>
+<br>
+<label for="terms">terms:
+<input type="checkbox" id="terms" required class="checkbox" /> I agree to terms and
+conditions
+</label>
+<br>
+<button type="submit">Register</button>
+</form>
+</body>
+</html>
